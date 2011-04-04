@@ -10,3 +10,5 @@ bin/dns
 bin/isengard
 bin/eigen
 bin/di
+bin/internalerror
+
