@@ -1,0 +1,14 @@
+
+URxvt*background:Black
+URxvt*foreground:White
+URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=15
+URxvt*transparent:false
+URxvt*tintColor:blue
+#URxvt*shading:40
+URxvt*saveLines:12000
+URxvt*color4:RoyalBlue
+URxvt*color12:RoyalBlue
+URxvt*scrollBar:true
+URxvt*scrollBar_right:true
+URxvt*scrollstyle:rxvt
+

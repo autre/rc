@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "open ~/Music/In\ the\ Mood\ for\ Love\ \[2\]\ -\ Yumeji\'s\ Theme\ \(Extended\ Version\).mp3" | at "$1"

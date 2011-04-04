@@ -1,0 +1,23 @@
+#!/bin/bash
+
+prog=`basename $0`
+
+if [ ! -f "$1" ] ; then
+	echo "$prog: cannot open $1: No such file or directory" 1>&2
+	exit 1
+fi
+
+if `file -k "$1" | grep -iq video 2>/dev/null`; then
+	vlc "$1"
+	exit $?
+elif `file -k "$1" | grep -iq image 2>/dev/null`; then
+	feh "$1"
+	exit $?
+fi
+
+case $1 in
+	*[PpDdFf]) xpdf "$1" 2>/dev/null ;;
+	*[BbMmPp]) feh "$1" ;;
+	*) echo "$prog: don't know how to open $1"; exit 1;;
+esac
+

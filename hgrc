@@ -1,0 +1,41 @@
+
+[ui]
+username = bill <b.alexandrou@gmail.com>
+merge = gvim
+
+[extensions]
+hgext.rebase =
+hgext.churn =
+hgext.bookmarks =
+hgext.record =
+hgext.hgk =
+hgext.extdiff =
+graphlog =
+color =
+pager =
+
+[alias]
+slog = log --template '{rev}:{node|short}:{date|age}: {desc|firstline}\n'
+show = log --color=always -pr
+stash = attic-shelve
+unstash = attic-unshelve
+id = id -nbti
+
+[extdiff]
+cmd.fmdiff = fmdiff
+
+[pager]
+# βλέπε: http://blog.experimentalworks.net/2008/03/mercurials-pager
+pager = LESS='FRX' less
+ignore = version, fmdiff, merge, update, push, pull, clone, serve, shelve, unshelve
+quiet = True
+
+[merge-patterns]
+** = filemerge
+
+[merge-tools]
+filemerge.executable = gvim
+filemerge.args = -d $local $other
+filemerge.checkchanged = True
+filemerge.gui = True
+

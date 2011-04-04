@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Options in order:
+# line buffer size
+# optimal term output
+# utf-8
+# session title
+# rename socket to <pid>.$1
+# execute given command as shell
+screen -h 1024 -U -O -t "$1" -S "$1" -s "$@"

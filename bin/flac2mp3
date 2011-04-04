@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for input in *.flac
+do
+    output=`echo "$input" | sed 's/.flac$/.mp3/'`
+    ffmpeg -i "$input" -ab 196k -ac 2 -ar 48000 "$output"
+done

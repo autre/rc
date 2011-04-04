@@ -1,0 +1,7 @@
+#!/bin/sh
+
+dos2unix $1 |
+iconv -f cp1253 -t utf-8 |
+fixfps.awk |
+iconv -f utf-8 -t cp1253 |
+sed 's/$/\r/' >$2 #unix2dos

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for host in $HOSTS
+do
+	echo contacting $host
+	scp "$1" $host:$2
+	ssh $host "sudo $1"
+done
