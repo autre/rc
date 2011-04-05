@@ -79,7 +79,7 @@ STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
 OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
 STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
 # This is for files with execute permission:
-EXEC 01;32
+EXEC 38;5;214
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to colorize below. Put the extension, a space, and the color init string.
 # (and any comments you want to add after a '#')
@@ -185,15 +185,15 @@ EXEC 01;32
 .spx 00;36
 .xspf 00;36
 # source text files
-.awk 00;33
-.sh 00;33
-.py 00;33
-.js 00;33
-.rb 00;33
-.st 00;33
-.hs 00;33
-.clj 00;33
-.c 00;33
-.h 00;33
-.cpp 00;33
-.java 00;33
+.awk 38;5;11
+.sh 38;5;11
+.py 38;5;11
+.js 38;5;11
+.rb 38;5;11
+.st 38;5;11
+.hs 38;5;11
+.clj 38;5;11
+.c 38;5;11
+.h 38;5;11
+.cpp 38;5;11
+.java 38;5;11

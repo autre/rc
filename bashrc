@@ -5,8 +5,8 @@
 
 NM="\[\033[0;38m\]" # means no background and white lines
 HI="\[\033[01;37m\]" # change this for letter colors
-HII="\[\033[01;31m\]" # change this for letter colors
-SI="\[\033[01;33m\]" # this is for the current directory
+HII="\[\033[38;5;214m\]" # change this for letter colors
+SI="\[\033[38;5;34m\]" # this is for the current directory
 IN="\[\033[0m\]"
 
 export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN"
@@ -14,9 +14,6 @@ export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN"
 export HISTSIZE=1000
 export HISTCONTROL=ignoreboth
 export HISTIGNORE=l:ls:ps:cd
-
-test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
-export TERM=xterm-256color
 
 test -f ~/.bash_aliases && . ~/.bash_aliases
 test -f /usr/local/etc/profile.d/bash_completion.sh && . /usr/local/etc/profile.d/bash_completion.sh
@@ -49,4 +46,7 @@ test `uname` == Darwin && {
 	export PAGER=vimpager
 	export PATH=/usr/local/bin:$PATH:~/bin
 }
+
+test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
+export TERM=xterm-256color
 
