@@ -91,7 +91,7 @@ EXEC 38;5;214
 #.bat 01;32
 # Or if you want to colorize scripts even if they do not have the
 # executable bit actually set.
-#.sh 01;32
+.sh 38;5;214
 #.csh 01;32
 # archives or compressed (bright red)
 .tar 01;31
@@ -197,3 +197,8 @@ EXEC 38;5;214
 .h 38;5;11
 .cpp 38;5;11
 .java 38;5;11
+# pdf, ps, doc
+.pdf 38;5;83
+.ps 38;5;83
+.doc 38;5;83
+.ppt 38;5;83
