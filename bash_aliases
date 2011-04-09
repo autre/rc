@@ -21,4 +21,5 @@ alias mv='mv --strip-trailing-slashes'
 alias gh=hg
 alias gs='git status'
 alias gd='git diff'
+alias g='git'
 

@@ -38,15 +38,26 @@
 	co = checkout
 	ci = commit
 	w = whatchanged
-        br = branch
-        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	wtf = !git-wtf
 
 [push]
-	default = current
+	default = tracking
 
 [pull]
 	default = current
 
 [merge]
 	tool = gvimdiff
+	stat = true
 
+[advice]
+	statusHints = false
+[diff]
+	renames = copies
+	mnemonicprefix = true
+[branch]
+	autosetupmerge = true
+[rerere]
+	enabled = true
