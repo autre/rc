@@ -50,5 +50,7 @@ test `uname` == Darwin && {
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
 export TERM=xterm-256color
 
-# Autocomplete for 'g' as well
+# Autocomplete for 'g' and 'h' as well
 complete -o default -o nospace -F _git g
+complete -o default -o nospace -F _hg h
+

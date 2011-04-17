@@ -22,4 +22,7 @@ alias gh=hg
 alias gs='git status'
 alias gd='git diff'
 alias g='git'
+alias h='hg'
+alias hs='hg st'
+alias hd='hg diff'
 

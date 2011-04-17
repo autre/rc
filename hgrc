@@ -15,7 +15,7 @@ color =
 pager =
 
 [alias]
-slog = log --template '{rev}:{node|short}:{date|age}: {desc|firstline}\n'
+slog = log --template '{rev}:{node|short}:{date|age}: {desc|firstline} [{author}]\n'
 show = log --color=always -pr
 stash = attic-shelve
 unstash = attic-unshelve
