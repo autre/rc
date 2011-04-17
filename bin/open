@@ -13,6 +13,7 @@ case `file -k "$1"` in
 	*video*) cmd=vlc ;;
 	*image*) cmd=feh ;;
 	*pdf*) cmd=xpdf ;;
+	*html*) cmd=chromium ;;
 	*) echo "$prog: don't know how to open $1"; exit 1;;
 esac
 
