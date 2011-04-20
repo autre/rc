@@ -29,5 +29,5 @@ sleep $duration
 kill $lamepid $mplayerpid
 rm $pipe
 
-mv "$output" ~/Dropbox/Public && rm -f ~/Dropbox/Public/$(date -d "7 days ago" +"$name @ %d-%b-%Y.mp3")
+mv "$output" ~/Dropbox/Public && rm -f ~/Dropbox/Public/$(date +"$name @ %d-%b-%Y.mp3" -d "7 days ago")
 
