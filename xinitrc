@@ -18,7 +18,7 @@ test -f ~/.Xresources && xrdb -merge ~/.Xresources
 setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
-xset -b # shut the stupid pc speaker
+#xset -b
 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
 	--expand true --width 10 --transparent true --tint 0x191970 --height 19 &
@@ -28,7 +28,7 @@ eval `cat ~/.fehbg` &
 dropboxd &
 pidgin &
 transmission-qt &
-gnome-terminal &
+gnome-terminal --hide-menubar&
 
 exec xmonad
 
