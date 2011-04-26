@@ -17,5 +17,5 @@ case `file -k "$1"` in
 	*) echo "$prog: don't know how to open $1"; exit 1;;
 esac
 
-exec $cmd "$1" 2>/dev/null
+exec $cmd "$1" 2>/dev/null &
 
