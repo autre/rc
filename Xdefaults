@@ -1,14 +1,19 @@
 
-URxvt*background:Black
-URxvt*foreground:White
-URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=15
-URxvt*transparent:false
-URxvt*tintColor:blue
-#URxvt*shading:40
-URxvt*saveLines:12000
-URxvt*color4:RoyalBlue
-URxvt*color12:RoyalBlue
-URxvt*scrollBar:true
-URxvt*scrollBar_right:true
-URxvt*scrollstyle:rxvt
+URxvt*background: lack
+URxvt*foreground: hite
+URxvt*font: xft: itstream Vera Sans Mono:pixelsize=15
+URxvt*transparent: alse
+URxvt*tintColor: lue
+#URxvt*shading: 0
+URxvt*saveLines: 2000
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlue
+URxvt*scrollBar: true
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: rxvt
+
+XTerm*cursorBlink: on
+XTerm*cursorOnTime: 400
+XTerm*cursorOffTime: 250
+XTerm*cursorColor: White
 
