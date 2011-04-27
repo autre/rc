@@ -36,6 +36,7 @@ test `uname` == Linux && {
 
 	alias vi=gvim
 	export EDITOR=gvim
+	export BROWSER=chromium
 	export PAGER=less
 	export PATH=$PATH:~/bin
 }
