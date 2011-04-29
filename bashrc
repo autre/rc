@@ -38,7 +38,7 @@ test `uname` == Linux && {
 	export EDITOR=gvim
 	export BROWSER=chromium
 	export PAGER=less
-	export PATH=$PATH:~/bin
+	export PATH=$PATH:/opt/bin:~/bin
 }
 
 test `uname` == Darwin && {
