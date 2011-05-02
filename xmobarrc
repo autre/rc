@@ -6,14 +6,15 @@ Config { font = "-bitstream-bitstream vera sans-medium-r-*-*-12-*-*-*-*-*-*-*"
        , lowerOnStart = True
        , commands = [ Run Network "eth0" ["-L","100","-H","500","--normal","green","--high","red"] 10
                     , Run Cpu ["-L","25","-H","80","--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 60
                     , Run Com "uname" ["-s","-r", "-n"] "" 360000
+                    , Run Swap [] 60
                     , Run Date "%a, %_d %b %Y %l:%M %p" "date" 60
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %uname% %cpu% | %memory% * | %eth0% <fc=#ee9a00>%date%</fc> "
+       , template = "%StdinReader% }{ %uname% %cpu% | %memory% * %swap% | %eth0% <fc=#ee9a00>%date%</fc> "
        }
 
 -- setup vim: set syntax=haskell :
