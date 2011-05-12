@@ -46,6 +46,7 @@ test `uname` == Darwin && {
 	export EDITOR='mvim -p'
 	export PAGER=vimpager
 	export PATH=/usr/local/bin:$PATH:~/bin
+	export NODE_PATH=/usr/local/lib/node
 }
 
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
