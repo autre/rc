@@ -11,4 +11,6 @@ bin/isengard
 bin/eigen
 bin/di
 bin/internalerror
+bin/medusa
+bin/dns
 
