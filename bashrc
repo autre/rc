@@ -45,7 +45,7 @@ test `uname` == Darwin && {
 	alias vi='mvim -p'
 	export EDITOR='mvim -p'
 	export PAGER=vimpager
-	export PATH=/usr/local/bin:$PATH:~/bin
+	export PATH=/usr/local/bin:`echo $PATH | sed 's#:/usr/local/bin##g'`:~/bin
 	export NODE_PATH=/usr/local/lib/node
 }
 
