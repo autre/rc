@@ -40,6 +40,7 @@ test `uname` == Linux && {
 	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
 	export CATALINA_HOME=~/src/ntua/apache-tomcat-7.0.19
+	export NODE_PATH=/usr/local/lib/jsctags:$NODE_PATH
 }
 
 test `uname` == Darwin && {
