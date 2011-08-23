@@ -13,4 +13,6 @@ bin/di
 bin/internalerror
 bin/medusa
 bin/dns
+bin/testbed
+bin/lein
 
