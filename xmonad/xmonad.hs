@@ -44,5 +44,6 @@ main = do
         , ("A-l", spawn "xlock")
         , ("<Print>", spawn "gnome-screenshot -d 3 -w -B")
         , ("C-<Print>", spawn "gnome-screenshot -d 0.2")
+        , ("M-p", spawn "dmenu_run")
         ]
 
