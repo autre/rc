@@ -39,7 +39,7 @@ test `uname` == Linux && {
 	export BROWSER=chromium
 	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
-	export CATALINA_HOME=~/src/ntua/apache-tomcat-7.0.19
+	export CATALINA_HOME=~/src/tomcat7
 	export NODE_PATH=/usr/local/lib/jsctags:$NODE_PATH
 }
 
