@@ -39,7 +39,6 @@ test `uname` == Linux && {
 	export BROWSER=chromium
 	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
-	export CATALINA_HOME=~/src/tomcat7
 	export NODE_PATH=/usr/local/lib/jsctags:$NODE_PATH
 }
 
@@ -53,6 +52,7 @@ test `uname` == Darwin && {
 
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
 export TERM=xterm-256color
+export CATALINA_HOME=~/src/tomcat7
 
 # Autocomplete for 'g' and 'h' as well
 complete -o default -o nospace -F _git g
