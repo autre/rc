@@ -2,7 +2,7 @@
     "settings" : {
         "id" : "whatever",
         "name" : "Profile Template",
-        "avatar" : "http://www.gravatar.com/avatar/1ecb9d7eb5d4b5bcad2fba8187f2a323?s=80"
+        "avatar" : "http://www.gravatar.com/avatar/1ecb9d7eb5d4b5bcad2fba8187f2a323?s=80",
         "disqus_shortname" : "autre",
         "enable_search" : true
     },
