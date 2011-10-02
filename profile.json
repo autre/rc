@@ -1,0 +1,40 @@
+{
+    "settings" : {
+        "id" : "whatever",
+        "name" : "Profile Template",
+        "avatar" : "http://www.gravatar.com/avatar/1ecb9d7eb5d4b5bcad2fba8187f2a323?s=80"
+        "disqus_shortname" : "autre",
+        "enable_search" : true
+    },
+    "content" : {
+        "article" : {
+            "title" : "Start here!",
+            "content" : "TBD"
+        },
+        "blog" : {
+            "title" : "A Blog",
+            "type" : "blog",
+            "content" : {
+                "second": {
+                    "created" : "2011-09-17",
+                    "content" : "http://hackerhub.org/template/second.md"
+                },
+                "f1rst" : {
+                    "created" : "17.09.2011",
+                    "content" : "http://hackerhub.org/template/first.md"
+                }
+            }
+        },
+        "hackernews" : {
+            "title" : "Hacker News",
+            "type" : "rss",
+            "show_description" : false,
+            "content" : "http://news.ycombinator.com/rss"
+        },
+        "twitter":{
+            "title" : "twitter",
+            "type" : "twitter",
+            "username" : "autre"
+        }
+    }
+}
