@@ -34,7 +34,7 @@
             "title": "reader",
             "type": "rss",
             "show_description": false,
-            "content": "http://www.google.com/reader/shared/06493718645054827169"
+            "content": "http://www.google.com/reader/public/atom/user%2F06493718645054827169%2Fstate%2Fcom.google%2Fbroadcast"
         }
     }
 }
