@@ -24,12 +24,13 @@
                     "content" : "http://hackerhub.org/template/first.md"
                 }
             }
+        },
         "twitter":{
             "title" : "twitter",
             "type" : "twitter",
             "username" : "autre"
         },
-        "reader": {
+        "greader": {
             "title": "reader",
             "type": "rss",
             "show_description": false,
