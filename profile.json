@@ -30,10 +30,10 @@
             "type" : "twitter",
             "username" : "autre"
         },
-        "greader": {
-            "title": "reader",
+        "google reader": {
+            "title": "greader",
             "type": "rss",
-            "show_description": false,
+            "show_description": true,
             "content": "http://www.google.com/reader/public/atom/user%2F06493718645054827169%2Fstate%2Fcom.google%2Fbroadcast"
         }
     }
