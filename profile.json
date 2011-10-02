@@ -1,6 +1,6 @@
 {
     "settings" : {
-        "id" : "whatever",
+        "id" : "autre",
         "name" : "Profile Template",
         "avatar" : "http://www.gravatar.com/avatar/1ecb9d7eb5d4b5bcad2fba8187f2a323?s=80",
         "disqus_shortname" : "autre",
@@ -24,12 +24,6 @@
                     "content" : "http://hackerhub.org/template/first.md"
                 }
             }
-        },
-        "hackernews" : {
-            "title" : "Hacker News",
-            "type" : "rss",
-            "show_description" : false,
-            "content" : "http://news.ycombinator.com/rss"
         },
         "twitter":{
             "title" : "twitter",
