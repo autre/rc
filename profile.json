@@ -46,7 +46,7 @@
             "title": "bitbucket",
             "type": "rss",
             "show_description": true,
-            "content": "https://bitbucket.org/autre/rss/feed?token=2023a99c5b8851c6f002ec1433eb205a",
-        },
+            "content": "https://bitbucket.org/autre/rss/feed?token=2023a99c5b8851c6f002ec1433eb205a"
+        }
     }
 }
