@@ -24,6 +24,7 @@ myFloatHooks = composeAll
     , className =? "Transmission-qt" --> doFloat
     , className =? "Transmission" --> doFloat
     , className =? "Brasero" --> doFloat
+    , className =? "skype" --> doFloat
     -- , className =? "Eclipse" --> doFloat
     -- , className =? "sun-awt-X11-XFramePeer" --> doFloat
     ]
