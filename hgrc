@@ -2,6 +2,7 @@
 [ui]
 username = bill <b.alexandrou@gmail.com>
 merge = gvim
+ssh = ssh -C
 
 [extensions]
 hgext.rebase =
