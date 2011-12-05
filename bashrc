@@ -52,6 +52,8 @@ test `uname` == Darwin && {
 
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
 export TERM=xterm-256color
+# for tmux: export 256color
+[ -n "$TMUX" ] && export TERM=screen-256color
 export CATALINA_HOME=~/src/tomcat7
 
 # Autocomplete for 'g' and 'h' as well
