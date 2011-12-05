@@ -50,11 +50,12 @@ test `uname` == Darwin && {
 	export NODE_PATH=/usr/local/lib/node
 }
 
+export CATALINA_HOME=~/src/tomcat7
+
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
 export TERM=xterm-256color
-# for tmux: export 256color
-[ -n "$TMUX" ] && export TERM=screen-256color
-export CATALINA_HOME=~/src/tomcat7
+export GREP_OPTIONS='--color=auto'
+[ -n "$TMUX" ] && export TERM=screen-256color # for tmux: export 256color
 
 # Autocomplete for 'g' and 'h' as well
 complete -o default -o nospace -F _git g
