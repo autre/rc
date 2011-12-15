@@ -61,3 +61,6 @@ export GREP_OPTIONS='--color=auto'
 complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _hg h
 
+. ~/.dotrc/maven-completion.sh
+. ~/.dotrc/lein-completion.sh
+
