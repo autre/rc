@@ -58,5 +58,6 @@
 	mnemonicprefix = true
 [branch]
 	autosetupmerge = true
+	autosetuprebase = always
 [rerere]
 	enabled = true
