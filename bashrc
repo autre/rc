@@ -60,3 +60,8 @@ complete -o default -o nospace -F _hg h
 
 . ~/.dotrc/maven-completion.sh
 
+# https://gist.github.com/590895
+function git_current_branch() {
+  git symbolic-ref HEAD 2>/dev/null | sed -e 's/refs\/heads\///'
+}
+

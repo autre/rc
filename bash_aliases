@@ -26,3 +26,9 @@ alias h='hg'
 alias hs='hg st'
 alias hd='hg diff'
 
+# https://gist.github.com/590895
+alias gpthis='git push origin HEAD:$(git_current_branch)'
+alias grb='git rebase -p'
+alias gup='git fetch origin && grb origin/$(git_current_branch)'
+alias gm='git merge --no-ff'
+
