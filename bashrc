@@ -27,16 +27,10 @@ shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob # include dotfiles in pathname expansion
 
 test `uname` == Linux && {
-	# part of kernel patch that improves interactive performance
-	if [ "$PS1" ] ; then
-		mkdir -p -m 0700 /dev/cgroup/cpu/user/$$ >/dev/null 2>&1
-		echo $$ >/dev/cgroup/cpu/user/$$/tasks
-		echo "1" >/dev/cgroup/cpu/user/$$/notify_on_release
-	fi
-
 	alias vi=gvim
 	export EDITOR=gvim
 	export BROWSER=chromium
+	export TERMINAL=gnome-terminal
 	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
 }

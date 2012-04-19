@@ -30,5 +30,6 @@ pidgin &
 transmission-qt &
 gnome-terminal --hide-menubar&
 
-exec xmonad
+exec i3 -V >>~/.i3/i3log >&1
+
 
