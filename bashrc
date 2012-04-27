@@ -8,7 +8,7 @@ HII="\[\033[38;5;214m\]" # change this for letter colors
 SI="\[\033[38;5;34m\]" # this is for the current directory
 IN="\[\033[0m\]"
 
-export PS1="$NM[ $HI\u $HII\h $SI\w$NM ] $IN"
+export PS1="\[\033[G\]$NM[ $HI\u $HII\h $SI\w$NM ] $IN"
 #export PS1='\u@\h:\w$ '
 export HISTFILESIZE=10000 # Record last 10,000 commands
 export HISTSIZE=10000 # Record last 10,000 commands per session
