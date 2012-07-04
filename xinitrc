@@ -4,6 +4,13 @@
 #
 # Executed by startx (run your window manager from here)
 
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
+
 export LANG=el_GR.UTF-8
 export LC_ALL=el_GR.UTF-8
 export LC_CTYPE=el_GR.UTF-8
@@ -27,9 +34,8 @@ eval `cat ~/.fehbg` &
 
 dropboxd &
 pidgin &
-transmission-qt &
+transmission-gtk &
 gnome-terminal --hide-menubar&
 
-exec i3 -V >>~/.i3/i3log >&1
-
+exec xmonad
 
