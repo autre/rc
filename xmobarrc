@@ -2,7 +2,8 @@
 Config { font = "-bitstream-bitstream vera sans-medium-r-*-*-12-*-*-*-*-*-*-*"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = TopW L 110
+       -- , position = TopW L 110
+       ,position = Static { xpos = 0 , ypos = 0, width = 1512, height = 19 }
        , lowerOnStart = True
        , commands = [ Run Network "eth0" ["-L","100","-H","500","--normal","green","--high","red"] 10
                     , Run Cpu ["-L","25","-H","80","--normal","green","--high","red"] 10

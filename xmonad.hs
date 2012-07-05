@@ -18,8 +18,8 @@ myLogHook xmproc = do
         fadeInactiveLogHook 0xdddddddd -- or 0.0 - 1.0
 
 myFloatHooks = composeAll
-    [ className =? "Pidgin" --> doFloat
-    , className =? "Transmission-qt" --> doFloat
+    [ className =? "pidgin" --> doFloat
+    , className =? "transmission-gtk" --> doFloat
     , className =? "skype" --> doFloat
     ]
 
