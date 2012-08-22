@@ -18,9 +18,9 @@ myLogHook xmproc = do
         fadeInactiveLogHook 0xdddddddd -- or 0.0 - 1.0
 
 myFloatHooks = composeAll
-    [ className =? "pidgin" --> doFloat
-    , className =? "transmission-gtk" --> doFloat
-    , className =? "skype" --> doFloat
+    [ className =? "Pidgin" --> doFloat
+    , className =? "Transmission-qtk" --> doFloat
+    , className =? "Skype" --> doFloat
     ]
 
 myManageHook = manageDocks <+> myFloatHooks <+> manageHook defaultConfig

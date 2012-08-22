@@ -34,7 +34,7 @@ eval `cat ~/.fehbg` &
 
 dropboxd &
 pidgin &
-transmission-gtk &
+transmission-qt &
 gnome-terminal --hide-menubar&
 
 exec xmonad
