@@ -52,7 +52,8 @@ export GREP_OPTIONS='--color=auto'
 complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _hg h
 
-. ~/.maven-completion.sh
+test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
+test -f /usr/share/git/completion/git-completion.bash && . /usr/share/git/completion/git-completion.bash
 
 # https://gist.github.com/590895
 function git_current_branch() {
