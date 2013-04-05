@@ -14,7 +14,7 @@ hgext.extdiff =
 graphlog =
 color =
 pager =
-hggit =
+#hggit =
 
 [alias]
 slog = log --template '{rev}:{node|short}:{date|age}: {desc|firstline} [{author}]\n'

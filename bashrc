@@ -38,8 +38,9 @@ test `uname` == Linux && {
 test `uname` == Darwin && {
 	alias vi='mvim -p'
 	export EDITOR='mvim -p'
-	export PAGER=vimpager
+	export PAGER=less
 	export PATH=/usr/local/bin:`echo $PATH | sed 's#:/usr/local/bin##g'`:~/bin
+	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home'
 }
 
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
