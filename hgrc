@@ -14,7 +14,8 @@ hgext.extdiff =
 graphlog =
 color =
 pager =
-hggit =
+#hggit =
+fclone = /usr/lib/python2.7/site-packages/forest.py
 
 [alias]
 slog = log --template '{rev}:{node|short}:{date|age}: {desc|firstline} [{author}]\n'

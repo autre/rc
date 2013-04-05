@@ -19,6 +19,7 @@ export LC_NUMERIC=C
 
 # a possible fix for java apps
 export _JAVA_AWT_WM_NONREPARENTING=1
+wmname LG3D
 
 test -f ~/.Xdefaults && xrdb ~/.Xdefaults
 test -f ~/.Xresources && xrdb -merge ~/.Xresources
