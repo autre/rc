@@ -4,6 +4,13 @@
 #
 # Executed by startx (run your window manager from here)
 
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
+
 export LANG=el_GR.UTF-8
 export LC_ALL=el_GR.UTF-8
 export LC_CTYPE=el_GR.UTF-8
@@ -12,6 +19,7 @@ export LC_NUMERIC=C
 
 # a possible fix for java apps
 export _JAVA_AWT_WM_NONREPARENTING=1
+wmname LG3D
 
 test -f ~/.Xdefaults && xrdb ~/.Xdefaults
 test -f ~/.Xresources && xrdb -merge ~/.Xresources
@@ -30,6 +38,5 @@ pidgin &
 transmission-qt &
 gnome-terminal --hide-menubar&
 
-exec i3 -V >>~/.i3/i3log >&1
-
+exec xmonad
 

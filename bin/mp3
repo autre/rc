@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# format, url, bitrate
+youtube-dl -q -o '%(stitle)s.%(ext)s' -f "$1" "$2" --extract-audio --audio-format mp3 --audio-quality "$3"
