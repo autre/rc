@@ -41,11 +41,6 @@
 	w = whatchanged
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	wtf = !git-wtf
-        ; FIXME: http://viget.com/extend/only-you-can-prevent-git-merge-commits
-        ;FIXME: pthis = push origin HEAD:$(git_current_branch)
-        ;FIXME: rb = rebase -p
-        ;FIXME: up = fetch origin &&
 
 [push]
 	default = tracking
