@@ -19,7 +19,7 @@ myLogHook xmproc = do
 
 myFloatHooks = composeAll
     [ className =? "Pidgin" --> doFloat
-    , className =? "Transmission-qtk" --> doFloat
+    , className =? "Transmission-qt" --> doFloat
     , className =? "Skype" --> doFloat
     ]
 
