@@ -21,6 +21,8 @@ myFloatHooks = composeAll
     [ className =? "Pidgin" --> doFloat
     , className =? "Transmission-qt" --> doFloat
     , className =? "Skype" --> doFloat
+    , className =? "sun-awt-X11-XFramePeer" --> doFloat
+    , className =? "org-mozilla-javascript-tools-shell-Main" --> doFloat
     ]
 
 myManageHook = manageDocks <+> myFloatHooks <+> manageHook defaultConfig
