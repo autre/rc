@@ -4,7 +4,7 @@
 
 NM="\[\033[0;38m\]" # means no background and white lines
 HI="\[\033[01;37m\]" # change this for letter colors
-HII="\[\033[38;5;214m\]" # change this for letter colors
+HII="\[\033[01;31m\]" # change this for letter colors
 SI="\[\033[38;5;34m\]" # this is for the current directory
 IN="\[\033[0m\]"
 
@@ -40,7 +40,7 @@ test `uname` == Darwin && {
 	export EDITOR='mvim -p'
 	export PAGER=less
 	export PATH=/usr/local/bin:`echo $PATH | sed 's#:/usr/local/bin##g'`:~/bin
-	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home'
+	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home'
 }
 
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
