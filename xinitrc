@@ -28,15 +28,13 @@ setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
 xset -b
 
-trayer --edge top --align right --SetDockType true --SetPartialStrut true \
-	--expand true --width 10 --transparent true --tint 0x191970 --height 19 &
+#trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+# --expand true --width 10 --transparent true --tint 0x191970 --height 19 &
 
-eval `cat ~/.fehbg` &
-
+sh ~/.fehbg &
 dropboxd &
 pidgin &
 transmission-qt &
-gnome-terminal --hide-menubar&
+gnome-terminal --hide-menubar &
 
-exec xmonad
-
+exec awesome
