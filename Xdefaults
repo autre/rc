@@ -1,9 +1,9 @@
 
-URxvt*background: lack
-URxvt*foreground: hite
-URxvt*font: xft: itstream Vera Sans Mono:pixelsize=15
-URxvt*transparent: alse
-URxvt*tintColor: lue
+URxvt*background: black
+URxvt*foreground: white
+URxvt*font: xft: Bitstream Vera Sans Mono:pixelsize=15
+URxvt*transparent: false
+URxvt*tintColor: blue
 #URxvt*shading: 0
 URxvt*saveLines: 2000
 URxvt*color4: RoyalBlue
