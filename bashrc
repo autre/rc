@@ -41,11 +41,10 @@ test `uname` == Darwin && {
 	export PAGER=less
 	export PATH=/usr/local/bin:`echo $PATH | sed 's#:/usr/local/bin##g'`:~/bin
 	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home'
+	export TERM=xterm-256color
 }
 
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
-
-export TERM=xterm-256color
 export GREP_OPTIONS='--color=auto'
 [ -n "$TMUX" ] && export TERM=screen-256color # for tmux: export 256color
 

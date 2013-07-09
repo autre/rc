@@ -21,8 +21,7 @@ export LC_NUMERIC=C
 export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 
-test -f ~/.Xdefaults && xrdb ~/.Xdefaults
-test -f ~/.Xresources && xrdb -merge ~/.Xresources
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
