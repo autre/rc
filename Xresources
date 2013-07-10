@@ -17,17 +17,28 @@ Xft.rgba: rgb
 URxvt*buffered: true
 URxvt*cursorBlink: true
 URxvt*underlineColor: yellow
-URxvt*font: xft:inconsolata:size=14:antialias=true
+URxvt*font: xft:Droid Sans Mono:size=11:antialias=true
 URxvt*depth: 32
-URxvt*borderless: 1
+URxvt*borderless: true
 URxvt*scrollBar: false
 ! URxvt*loginShell: true
 Urxvt*secondaryScroll: true # Enable Shift-PageUp/Down in screen
-URxvt*saveLines: 5000
+URxvt*saveLines: 10000
 ! URxvt*termName: rxvt-unicode
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: firefox
-URxvt.matcher.button: 1
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,tabbed
+URxvt.url-select.launcher: firefox -new-tab
+URxvt.url-select.underline: true
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
@@ -110,7 +121,7 @@ URxvt.matcher.button: 1
 !!! solarized light [http://github.com/altercation/solarized]
 *background: #fdf6e3
 *foreground: #839496
-!!*fading: 40
+*fading: 40
 *fadeColor: #fdf6e3
 *cursorColor: #586e75
 *pointerColorBackground: #93a1a1
