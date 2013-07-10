@@ -1,4 +1,18 @@
 
+! Xcursor
+Xcursor.theme: Vanilla-DMZ-AA
+Xcursor.size: 22
+
+! Xft settings
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+! Xft.hintstyle: hintslight
+Xft.autohint: false
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+
 ! urxvt
 URxvt*buffered: true
 URxvt*cursorBlink: true
