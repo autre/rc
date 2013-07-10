@@ -1,0 +1,33 @@
+#!/bin/bash
+
+prog=$(basename $0)
+
+test $# -lt 1 && {
+	echo $prog: arg count 1>&2
+	exit 1
+}
+
+extract_zip_sub() {
+	test -f "$1" || {
+		echo $prog: $1 is not a file 1>&2
+		return 1
+	}
+
+	old=$(pwd)
+	unz=sub.$$
+	mv "$1" /tmp
+	cd /tmp
+	unzip -d "$unz" /tmp/"$1"
+	srt=$(find "$unz" -iname '*.srt')
+	test "$srt" && mv "$srt" $old && rm -fr /tmp/"$unz" && cd "$old" && return 0
+	cd "$unz"
+	rar=$(find . -iname '*.rar')
+	unrar x -y -idq "$rar" >/dev/null
+	srt=$(find . -iname '*.srt')
+	test "$srt" && mv "$srt" "$old" && rm -fr /tmp/"$unz" && cd "$old" && return 0
+}
+
+for i in "$@"
+do
+	extract_zip_sub "$i"
+done
