@@ -15,11 +15,10 @@ graphlog =
 color =
 pager =
 #hggit =
-fclone = /usr/lib/python2.7/site-packages/forest.py
 
 [alias]
 slog = log --template '{rev}:{node|short}:{date|age}: {desc|firstline} [{author}]\n'
-show = log --color=always -pr
+glog = glog --template "\033[31m{node|short}\033[0m \033[1;34m<{author|person}>\033[0m \033[32m({date|age})\033[0m \n\t\t{desc}\n"
 stash = attic-shelve
 unstash = attic-unshelve
 id = id -nbti
