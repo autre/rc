@@ -80,81 +80,81 @@ URxvt.iso14755_52: false
 
 
 !!! solarized dark
-! *background: S_base03
-! *foreground: S_base00
-! *cursorColor: S_base1
-! *pointerColorBackground:S_base01
-! *pointerColorForeground:S_base1
-!
-! !! black dark/light
-! *color0: S_base02
-! *color8: S_base03
-!
-! !! red dark/light
-! *color1: S_red
-! *color9: S_orange
-!
-! !! green dark/light
-! *color2: S_green
-! *color10: S_base01
-!
-! !! yellow dark/light
-! *color3: S_yellow
-! *color11: S_base00
-!
-! !! blue dark/light
-! *color4: S_blue
-! *color12: S_base0
-!
-! !! magenta dark/light
-! *color5: S_magenta
-! *color13: S_violet
-!
-! !! cyan dark/light
-! *color6: S_cyan
-! *color14: S_base1
-!
-! !! white dark/light
-! *color7: S_base2
-! *color15: S_base3
-
-!!! solarized light [http://github.com/altercation/solarized]
-*background: #fdf6e3
-*foreground: #839496
-*fading: 40
-*fadeColor: #fdf6e3
-*cursorColor: #586e75
-*pointerColorBackground: #93a1a1
-*pointerColorForeground: #586e75
+*background: S_base03
+*foreground: S_base00
+*cursorColor: S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
 
 !! black dark/light
-*color0: #eee8d5
-*color8: #fdf6e3
+*color0: S_base02
+*color8: S_base03
 
 !! red dark/light
-*color1: #dc322f
-*color9: #cb4b16
+*color1: S_red
+*color9: S_orange
 
 !! green dark/light
-*color2: #859900
-*color10: #93a1a1
+*color2: S_green
+*color10: S_base01
 
 !! yellow dark/light
-*color3: #b58900
-*color11: #839496
+*color3: S_yellow
+*color11: S_base00
 
 !! blue dark/light
-*color4: #268bd2
-*color12: #657b83
+*color4: S_blue
+*color12: S_base0
 
 !! magenta dark/light
-*color5: #d33682
-*color13: #6c71c4
+*color5: S_magenta
+*color13: S_violet
 
 !! cyan dark/light
-*color6: #2aa198
-*color14: #586e75
+*color6: S_cyan
+*color14: S_base1
 
 !! white dark/light
-*color7: #073642
-*color15: #002b36
+*color7: S_base2
+*color15: S_base3
+
+!!! solarized light [http://github.com/altercation/solarized]
+! *background: #fdf6e3
+! *foreground: #839496
+! *fading: 40
+! *fadeColor: #fdf6e3
+! *cursorColor: #586e75
+! *pointerColorBackground: #93a1a1
+! *pointerColorForeground: #586e75
+!
+! !! black dark/light
+! *color0: #eee8d5
+! *color8: #fdf6e3
+!
+! !! red dark/light
+! *color1: #dc322f
+! *color9: #cb4b16
+!
+! !! green dark/light
+! *color2: #859900
+! *color10: #93a1a1
+!
+! !! yellow dark/light
+! *color3: #b58900
+! *color11: #839496
+!
+! !! blue dark/light
+! *color4: #268bd2
+! *color12: #657b83
+!
+! !! magenta dark/light
+! *color5: #d33682
+! *color13: #6c71c4
+!
+! !! cyan dark/light
+! *color6: #2aa198
+! *color14: #586e75
+!
+! !! white dark/light
+! *color7: #073642
+! *color15: #002b36
