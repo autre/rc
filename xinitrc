@@ -34,6 +34,6 @@ sh ~/.fehbg &
 dropboxd &
 pidgin &
 transmission-qt &
-gnome-terminal --hide-menubar &
+urxvt &
 
 exec awesome
