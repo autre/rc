@@ -27,11 +27,11 @@ setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
 xset -b
 numlockx on
+sh ~/.fehbg
 
 #trayer --edge top --align right --SetDockType true --SetPartialStrut true \
 # --expand true --width 10 --transparent true --tint 0x191970 --height 19 &
 
-sh ~/.fehbg &
 dropboxd &
 pidgin &
 transmission-qt &
