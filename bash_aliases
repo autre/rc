@@ -5,6 +5,7 @@ alias l='ls -lhtr'
 alias la='l -A'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias less='less -R'
 alias p=less
 alias diff='colordiff -uw'
 alias indent='indent -kr -i8'
