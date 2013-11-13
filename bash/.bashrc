@@ -33,6 +33,20 @@ test `uname` == Linux && {
 	export TERMINAL=gnome-terminal
 	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
+
+	# SSH agent settings
+	SSHAGENT=/usr/bin/ssh-agent
+	SSHAGENTARGS="-s"
+	if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
+		eval `$SSHAGENT $SSHAGENTARGS`
+		trap "kill $SSH_AGENT_PID" 0
+	fi
+
+	export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/bill/perl5";
+	export PERL_MB_OPT="--install_base /home/bill/perl5";
+	export PERL_MM_OPT="INSTALL_BASE=/home/bill/perl5";
+	export PERL5LIB="/home/bill/perl5/lib/perl5:$PERL5LIB";
+	export PATH="/home/bill/perl5/bin:$PATH";
 }
 
 test `uname` == Darwin && {
@@ -57,5 +71,5 @@ test -f /usr/share/git/completion/git-completion.bash && . /usr/share/git/comple
 
 # https://gist.github.com/590895
 function git_current_branch() {
-  git symbolic-ref HEAD 2>/dev/null | sed -e 's/refs\/heads\///'
+	git symbolic-ref HEAD 2>/dev/null | sed -e 's/refs\/heads\///'
 }
