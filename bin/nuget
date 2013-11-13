@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec mono --runtime=v4.0.30319 ~/.local/share/NuGet/NuGet.exe "$@"

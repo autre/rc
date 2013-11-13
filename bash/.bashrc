@@ -29,7 +29,7 @@ shopt -s dotglob # include dotfiles in pathname expansion
 test `uname` == Linux && {
 	alias vi=gvim
 	export EDITOR=gvim
-	export BROWSER=chromium
+	export BROWSER=firefox
 	export TERMINAL=gnome-terminal
 	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
@@ -59,4 +59,3 @@ test -f /usr/share/git/completion/git-completion.bash && . /usr/share/git/comple
 function git_current_branch() {
   git symbolic-ref HEAD 2>/dev/null | sed -e 's/refs\/heads\///'
 }
-
