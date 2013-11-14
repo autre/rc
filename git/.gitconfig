@@ -27,7 +27,7 @@
 	untracked = cyan
 
 [core]
-	editor = mvim -f
+	editor = git-edit
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	attributesfile = ~/.gitattributes
@@ -41,6 +41,7 @@
 	w = whatchanged
 	br = branch
 	hist = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	datetag = '!git tag `date "+%Y%m%d%H%M"`'
 
 [push]
 	default = tracking
@@ -49,7 +50,7 @@
 	default = current
 
 [merge]
-	tool = gvimdiff
+	tool = git-edit -d
 	stat = true
 
 [advice]
