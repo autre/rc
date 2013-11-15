@@ -54,7 +54,7 @@ test `uname` == Darwin && {
 	export EDITOR='mvim -p'
 	export PAGER=less
 	export PATH=/usr/local/bin:`echo $PATH | sed 's#:/usr/local/bin##g'`:~/bin
-	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home'
+	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
 	export TERM=xterm-256color
 }
 
