@@ -15,9 +15,6 @@ export HISTSIZE=10000 # Record last 10,000 commands per session
 export HISTCONTROL=ignoreboth
 export HISTIGNORE=l:ls:ps:cd
 
-test -f ~/.bash_aliases && . ~/.bash_aliases
-test -f /usr/local/etc/profile.d/bash_completion.sh && . /usr/local/etc/profile.d/bash_completion.sh
-
 shopt -s histappend
 shopt -s autocd # change to named directory
 shopt -s cdable_vars # if cd arg is not valid, assumes its a var defining a dir
@@ -30,7 +27,6 @@ test `uname` == Linux && {
 	alias vi=gvim
 	export EDITOR=gvim
 	export BROWSER=firefox
-	export TERMINAL=gnome-terminal
 	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
 
@@ -66,10 +62,7 @@ export GREP_OPTIONS='--color=auto'
 complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _hg h
 
+test -f ~/.bash_aliases && . ~/.bash_aliases
+test -f /usr/local/etc/profile.d/bash_completion.sh && . /usr/local/etc/profile.d/bash_completion.sh
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 test -f /usr/share/git/completion/git-completion.bash && . /usr/share/git/completion/git-completion.bash
-
-# https://gist.github.com/590895
-function git_current_branch() {
-	git symbolic-ref HEAD 2>/dev/null | sed -e 's/refs\/heads\///'
-}
