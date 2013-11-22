@@ -3,7 +3,7 @@
 [[ $- != *i* ]] && return
 
 NM="\[\033[0;38m\]" # means no background and white lines
-HI="\[\033[01;37m\]" # change this for letter colors
+HI="\[\033[01;35m\]" # change this for letter colors
 HII="\[\033[01;31m\]" # change this for letter colors
 SI="\[\033[38;5;34m\]" # this is for the current directory
 IN="\[\033[0m\]"
