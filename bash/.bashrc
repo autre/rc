@@ -2,14 +2,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-NM="\[\033[0;38m\]" # means no background and white lines
-HI="\[\033[01;35m\]" # change this for letter colors
-HII="\[\033[01;31m\]" # change this for letter colors
-SI="\[\033[38;5;34m\]" # this is for the current directory
-IN="\[\033[0m\]"
+NM="\[\033[0;37m\]" # means no background and white lines
+AMI="\[\033[01;34m\]" # change this for letter colors
+MACH="\[\033[01;31m\]" # change this for letter colors
+CD="\[\033[38;5;34m\]" # this is for the current directory
+RESET="\[\033[0m\]"
 
-export PS1="\[\033[G\]$NM[ $HI\u $HII\h $SI\w$NM ] $IN"
-#export PS1='\u@\h:\w$ '
+export PS1="\[\033[G\]$AMI\u$NM/$MACH\h $CD\w$NM λ $RESET"
 export HISTFILESIZE=10000 # Record last 10,000 commands
 export HISTSIZE=10000 # Record last 10,000 commands per session
 export HISTCONTROL=ignoreboth
@@ -23,11 +22,12 @@ shopt -s checkwinsize # update the value of LINES and COLUMNS after each command
 shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob # include dotfiles in pathname expansion
 
+export PAGER=less
+export BROWSER=firefox
+
 test `uname` == Linux && {
 	alias vi=gvim
 	export EDITOR=gvim
-	export BROWSER=firefox
-	export PAGER=less
 	export PATH=$PATH:/opt/bin:~/bin
 
 	# SSH agent settings
@@ -48,7 +48,6 @@ test `uname` == Linux && {
 test `uname` == Darwin && {
 	alias vi='mvim -p'
 	export EDITOR='mvim -p'
-	export PAGER=less
 	export PATH=/usr/local/bin:`echo $PATH | sed 's#:/usr/local/bin##g'`:~/bin
 	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
 	export TERM=xterm-256color
