@@ -36,5 +36,6 @@ dropboxd &
 pidgin &
 transmission-qt &
 urxvt &
+volumeicon &
 
 exec awesome
