@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # vim: enc=utf-8
 
 """Take from: http://infix.se/2007/02/06/gentlemen-indent-your-xml"""

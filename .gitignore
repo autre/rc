@@ -1,16 +1,3 @@
 
-xmonad/ledmon
-xmonad/xmonad.hi
-xmonad/xmonad.errors
-xmonad/xmonad.o
-xmonad/xmonad-x86_64-linux
-
-bin/calm
-bin/dns
-bin/isengard
-bin/eigen
-bin/di
-bin/internalerror
-bin/testbed
-bin/lein
-
+xinit/colorscheme.resources
+xinit/dircolors-current
