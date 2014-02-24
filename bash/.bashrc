@@ -48,7 +48,7 @@ test `uname` == Linux && {
 test `uname` == Darwin && {
 	alias vi='mvim -p'
 	export EDITOR='mvim -p'
-	export PATH=/usr/local/bin:`echo $PATH | sed 's#:/usr/local/bin##g'`:~/bin
+	test -z "$TMUX" && export PATH=/usr/local/bin:$PATH:~/bin
 	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home'
 	export TERM=xterm-256color
 }
