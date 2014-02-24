@@ -34,7 +34,7 @@ sh ~/.fehbg
 
 dropboxd &
 pidgin &
-transmission-qt &
+transmission-gtk &
 urxvt &
 volumeicon &
 
