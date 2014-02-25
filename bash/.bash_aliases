@@ -27,6 +27,7 @@ alias h='hg'
 alias hs='hg st'
 alias hd='hg diff'
 alias openports='netstat --all --numeric --programs --inet --inet6'
+alias man='TERMINFO=~/.terminfo/ LESS=C TERM=mostlike PAGER=less man'
 
 # https://gist.github.com/590895
 alias gpthis='git push origin HEAD:$(git_current_branch)'
