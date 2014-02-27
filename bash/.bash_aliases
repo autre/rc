@@ -5,8 +5,6 @@ alias l='ls -lhtr'
 alias la='l -A'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias less='less -R'
-alias p=less
 alias diff='colordiff -uw'
 alias indent='indent -kr -i8'
 alias jtags='ctags -R --language-force=java'
@@ -27,6 +25,8 @@ alias h='hg'
 alias hs='hg st'
 alias hd='hg diff'
 alias openports='netstat --all --numeric --programs --inet --inet6'
+alias less='TERMINFO=~/.terminfo/ LESS=C TERM=mostlike less -R'
+alias p=less
 alias man='TERMINFO=~/.terminfo/ LESS=C TERM=mostlike PAGER=less man'
 
 # https://gist.github.com/590895
