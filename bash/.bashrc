@@ -24,11 +24,12 @@ shopt -s dotglob # include dotfiles in pathname expansion
 
 export PAGER=less
 export BROWSER=firefox
+unset MAILCHECK
 
 test `uname` == Linux && {
 	alias vi=gvim
 	export EDITOR=gvim
-	export PATH=$PATH:/opt/bin:~/bin
+	export PATH=$PATH:~/bin
 
 	# SSH agent settings
 	SSHAGENT=/usr/bin/ssh-agent
@@ -37,12 +38,6 @@ test `uname` == Linux && {
 		eval `$SSHAGENT $SSHAGENTARGS`
 		trap "kill $SSH_AGENT_PID" 0
 	fi
-
-	export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/bill/perl5";
-	export PERL_MB_OPT="--install_base /home/bill/perl5";
-	export PERL_MM_OPT="INSTALL_BASE=/home/bill/perl5";
-	export PERL5LIB="/home/bill/perl5/lib/perl5:$PERL5LIB";
-	export PATH="/home/bill/perl5/bin:$PATH";
 }
 
 test `uname` == Darwin && {
