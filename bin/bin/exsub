@@ -17,14 +17,14 @@ extract_zip_sub() {
 	unz=sub.$$
 	mv "$1" /tmp
 	cd /tmp
-	unzip -d "$unz" /tmp/"$1"
+	unzip -qq -d "$unz" /tmp/"$1"
 	srt=$(find "$unz" -iname '*.srt')
-	test "$srt" && mv "$srt" $old && rm -fr /tmp/"$unz" && cd "$old" && return 0
+	test "$srt" && touch "$srt" && mv "$srt" $old && rm -fr /tmp/"$unz" && cd "$old" && return 0
 	cd "$unz"
 	rar=$(find . -iname '*.rar')
 	unrar x -y -idq "$rar" >/dev/null
 	srt=$(find . -iname '*.srt')
-	test "$srt" && mv "$srt" "$old" && rm -fr /tmp/"$unz" && cd "$old" && return 0
+	test "$srt" && touch "$srt" && mv "$srt" "$old" && rm -fr /tmp/"$unz" && cd "$old" && return 0
 }
 
 for i in "$@"
