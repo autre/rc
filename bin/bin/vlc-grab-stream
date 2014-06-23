@@ -1,5 +1,4 @@
-#!/bin/bash
-set -x
+#!/bin/bash -x
 
 prog=`basename $0`
 
@@ -15,19 +14,13 @@ test $# -eq 0 -o "$1" == "-h" && {
 name="$1"
 url="$2"
 duration="$3"
-
-pipe=$TMP/$prog.$$
 output=$TMP/$(date +"$name @ %d-%b-%Y.mp3")
 old=$(date +"$name @ %d-%b-%Y.mp3" -d "7 days ago")
 
-mkfifo $pipe
-lame --silent -m s -q 2 -b 64 --add-id3v2 --ty $(date +%Y) --ta "$name" --tt "$(basename "$output" | sed 's/\.mp3$//')" --tn '1/1' --tg podcast $pipe "$output" &
-lamepid=$!
-mplayer -really-quiet -nocache -vo null -vc dummy -ao pcm:file=$pipe "$url" &
-mplayerpid=$!
+nohup cvlc "$url" :sout='#transcode{acodec=mp3,ab=64,scale=1,channels=2}:std{access=file,mux=dummy,dst='"$output"'}' 2>&1 >/dev/null &
+nohup_pid=$!
 sleep $duration
-kill $lamepid $mplayerpid
-rm $pipe
-
+kill $nohup_pid
 mv "$output" ~/Dropbox/Public && rm -f ~/Dropbox/Public/"$old"
+
 
