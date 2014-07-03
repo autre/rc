@@ -7,4 +7,6 @@ if [ -e /Users/bill/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/bill/.nix
 
 test -f ~/.dircolors && eval `dircolors -b ~/.dircolors`
 
-export SHELL=~/.nix-profile/bin/bash
+test `uname` == Darwin && {
+	export SHELL=~/.nix-profile/bin/bash
+}
