@@ -48,5 +48,5 @@ complete -o default -o nospace -F _hg h
 
 test -f ~/.bash_aliases && . ~/.bash_aliases
 # test -f /usr/local/etc/profile.d/bash_completion.sh && . /usr/local/etc/profile.d/bash_completion.sh
-# test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
-# test -f /usr/share/git/completion/git-completion.bash && . /usr/share/git/completion/git-completion.bash
+test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
+test -f /usr/share/git/completion/git-completion.bash && . /usr/share/git/completion/git-completion.bash
