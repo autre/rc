@@ -19,7 +19,7 @@ extract_zip_sub() {
 	cd /tmp
 	unzip -qq -d "$unz" /tmp/"$1"
 	srt=$(find "$unz" -iname '*.srt')
-	test "$srt" && touch "$srt" && mv "$srt" $old && rm -fr /tmp/"$unz" && cd "$old" && return 0
+	test "$srt" && touch "$srt" && mv "$srt" "$old" && rm -fr /tmp/"$unz" && cd "$old" && return 0
 	cd "$unz"
 	rar=$(find . -iname '*.rar')
 	unrar x -y -idq "$rar" >/dev/null
