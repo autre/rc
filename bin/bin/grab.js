@@ -1,4 +1,4 @@
-#!/usr/local/bin/jjs -scripting
+#!/usr/local/bin/jjs -strict
 
 'use strict';
 
@@ -89,7 +89,7 @@ function save_files_for(server_url, playlist, dir) {
         .forEach(function(file) {
             var out = file.split('_')[2];
 
-            debug(file + ' => ' + out);
+            // debug(file + ' => ' + out);
             save_to_file(get_url(server_url + '/' + file), "${dir}/${out}");
         });
 }
@@ -99,7 +99,7 @@ function make_file_list(tmp_dir) {
 
     Files
         .find(new File("${tmp_dir}").toPath(), 3, function(path, attr) { return path.toString().endsWith('.aac'); })
-        .sorted(function(x, y) { return new JString(x).compareTo(new JString(y)); }) // return Files.getLastModifiedTime(x).compareTo(Files.getLastModifiedTime(y)); })
+        .sorted(function(x, y) { return new JString(x).compareTo(new JString(y)); })
         .forEach(function(x) { arr.push('file ' + x.toString()); });
 
     return arr.join('\n');

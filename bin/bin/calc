@@ -1,4 +1,4 @@
 #!/bin/sh
 
-awk 'BEGIN { print '"$*"'}'
+awk 'BEGIN { printf "%.3f\n", '"$*"'}'
 
