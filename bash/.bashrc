@@ -22,10 +22,10 @@ shopt -s checkwinsize # update the value of LINES and COLUMNS after each command
 shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob # include dotfiles in pathname expansion
 
-export PATH=~/bin:$PATH
 export PAGER=less
 export BROWSER=firefox
 unset MAILCHECK
+export GREP_OPTIONS='--color=auto'
 
 test `uname` == Linux && {
 	export EDITOR=gvim
@@ -36,18 +36,17 @@ test `uname` == Darwin && {
 	export EDITOR='mvim -p'
 	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home'
 	export TERM=xterm-256color
-	export PATH=$PATH:/usr/local/bin
+	export PATH=/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
+	export PATH=~/bin:$PATH
+	#export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 	alias vi='mvim -p'
 }
 
-export GREP_OPTIONS='--color=auto'
-[ -n "$TMUX" ] && export TERM=screen-256color # for tmux: export 256color
+test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
+test -f ~/.bash_aliases && . ~/.bash_aliases
+test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
+test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
 
 # Autocomplete for 'g' and 'h' as well
 complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _hg h
-
-test -f ~/.bash_aliases && . ~/.bash_aliases
-# test -f /usr/local/etc/profile.d/bash_completion.sh && . /usr/local/etc/profile.d/bash_completion.sh
-test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
-test -f /usr/share/git/completion/git-completion.bash && . /usr/share/git/completion/git-completion.bash
