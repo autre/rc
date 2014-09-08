@@ -45,7 +45,7 @@ test `uname` == Darwin && {
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.bash_aliases && . ~/.bash_aliases
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
-test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
+test `uname` == Darwin && test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
 
 # Autocomplete for 'g' and 'h' as well
 complete -o default -o nospace -F _git g
