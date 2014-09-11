@@ -1,0 +1,25 @@
+#!/bin/bash
+
+prog=$(basename $0)
+tmp=/tmp/$prog.$$
+
+send_mail() {
+	local subject='movies to watch update'
+	local to='b.alexandrou@gmail.com'
+	local content="$1"
+
+	( echo Τελευταία ενημέρωση στις $(date); echo; cat "$content" ) |
+	mail -E -I -s "$subject" "$to"
+}
+
+cat ~/Dropbox/movies-to-watch |
+while read title
+do
+	first_word=$(echo "$title" | awk '{ print $1 }')
+	curl -s -G 'https://torrentz.eu/verified' --data-urlencode 'f='"$title" |
+	grep -v 'SimpleAcceptableTextAds' |
+	grep -i -q '<dl><dt>.*'"$first_word" && echo "$title"
+	sleep 5
+done >"$tmp"
+
+test -s "$tmp" && send_mail "$tmp" && rm -f "$tmp"
