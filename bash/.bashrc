@@ -37,10 +37,11 @@ test `uname` == Darwin && {
 	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home'
 	export TERM=xterm-256color
 	export PATH=/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
-	export PATH=~/bin:$PATH
 	#export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 	alias vi='mvim -p'
 }
+
+export PATH=~/bin:$PATH
 
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.bash_aliases && . ~/.bash_aliases
