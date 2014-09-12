@@ -1,3 +1,0 @@
-#!/bin/sh
-
-find . -name '*.java' -print0 | xargs -0 -P 2 grep -n --color=auto "$@"

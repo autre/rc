@@ -1,4 +1,0 @@
-#!/bin/sh
-
-mv ~/tmp/torrents/*.torrent ~/.bak
-
