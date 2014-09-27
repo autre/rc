@@ -12,7 +12,7 @@ send_mail() {
 	mail -E -I -s "$subject" "$to"
 }
 
-cat ~/Dropbox/movies-to-watch |
+cat "$1" |
 while read title
 do
 	first_word=$(echo "$title" | awk '{ print $1 }')
