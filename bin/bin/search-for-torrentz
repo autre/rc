@@ -8,8 +8,8 @@ send_mail() {
 	local to='b.alexandrou@gmail.com'
 	local content="$1"
 
-	( echo Τελευταία ενημέρωση στις $(date); echo; cat "$content" ) |
-	mail -E -I -s "$subject" "$to"
+	( cat "$content"; echo; echo Τελευταία ενημέρωση στις $(date) ) |
+	mail -E -s "$subject" "$to"
 }
 
 cat "$1" |
