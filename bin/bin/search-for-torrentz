@@ -15,11 +15,10 @@ send_mail() {
 cat "$1" |
 while read title
 do
-	first_word=$(echo "$title" | awk '{ print $1 }')
-	curl -s -G 'https://torrentz.eu/verified' --data-urlencode 'f='"$title" |
-	grep -v 'SimpleAcceptableTextAds' |
-	grep -i -q '<dl><dt>.*'"$first_word" && echo "$title"
+	curl -s -G 'https://torrentz.eu/search' --data-urlencode 'q='"$title -CAM -HDCAM -Trailer -CAMRIP" |
+	grep -i -q "$title.*movies" && echo "$title"
 	sleep 5
 done >"$tmp"
 
 test -s "$tmp" && send_mail "$tmp" && rm -f "$tmp"
+exit 0

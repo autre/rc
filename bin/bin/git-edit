@@ -1,6 +1,6 @@
 #!/bin/bash
 
 case `uname` in
-	*Linux*) /usr/bin/gvim "$@" ;;
+	*Linux*) /usr/bin/vim "$@" ;;
 	*Darwin*) /usr/local/bin/mvim -f "$@" ;;
 esac
