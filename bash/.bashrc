@@ -25,7 +25,6 @@ shopt -s dotglob # include dotfiles in pathname expansion
 export PAGER=less
 export BROWSER=firefox
 unset MAILCHECK
-export GREP_OPTIONS='--color=auto'
 
 test `uname` == Linux && {
 	export EDITOR=gvim
