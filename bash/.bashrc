@@ -40,7 +40,7 @@ test `uname` == Darwin && {
 	alias vi='mvim -p'
 }
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:$PATH:/usr/local/pgsql/bin
 
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.bash_aliases && . ~/.bash_aliases

@@ -15,7 +15,7 @@ send_mail() {
 cat "$1" |
 while read title
 do
-	curl -s -G 'https://torrentz.eu/search' --data-urlencode 'q='"$title -CAM -HDCAM -Trailer -CAMRIP" |
+	curl -s -G 'https://torrentz.eu/search' --data-urlencode 'q='"$title -CAM -HDCAM -Trailer -CAMRIP -RARBG -DVDSCR -scr -DD5 -SUBBED" |
 	grep -i -q "$title.*movies" && echo "$title"
 	sleep 5
 done >"$tmp"
