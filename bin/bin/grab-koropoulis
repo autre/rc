@@ -1,7 +1,8 @@
 #!/bin/bash
 
 duration=$((20 * 60)) # 20 mins
+tmp=/tmp/grab-$$.mp3
 out=$(date +'k-%Y-%m-%d.mp3')
 
-ffmpeg -loglevel quiet -t $duration -i 'http://nerit3radio-lh.akamaihd.net/i/live_1@123329/index_192_a-b.m3u8?sd=10&rebase=on' /tmp/grab.$$
-mv /tmp/grab.$$ "/home/bill/Dropbox/Public/κοροπουλης/$out"
+ffmpeg -loglevel quiet -t $duration -i 'http://nerit3radio-lh.akamaihd.net/i/live_1@123329/index_192_a-b.m3u8?sd=10&rebase=on' $tmp
+mv $tmp "/home/bill/Dropbox/Public/κοροπούλης/$out"
