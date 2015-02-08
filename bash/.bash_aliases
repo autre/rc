@@ -28,10 +28,3 @@ alias openports='netstat --all --numeric --programs --inet --inet6'
 alias less='TERMINFO=~/.terminfo/ LESS=C TERM=mostlike less -R'
 alias p=less
 alias man='TERMINFO=~/.terminfo/ LESS=C TERM=mostlike PAGER=less man'
-
-# https://gist.github.com/590895
-alias gpthis='git push origin HEAD:$(git_current_branch)'
-alias grb='git rebase -p'
-alias gup='git fetch origin && grb origin/$(git_current_branch)'
-alias gm='git merge --no-ff'
-
