@@ -1,1 +1,0 @@
-grep --color=auto -nE '(XXX|NOTES|FIXME|TODO)' "$@"
