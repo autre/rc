@@ -1,4 +1,0 @@
-#!/bin/sh
-
-awk 'BEGIN { print 1 / (1 + exp(-1 * '"$*"' ))}'
-
