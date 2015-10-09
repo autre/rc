@@ -33,7 +33,7 @@ test `uname` == Linux && {
 
 test `uname` == Darwin && {
 	export EDITOR='mvim -p'
-	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home'
+	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home'
 	export TERM=xterm-256color
 	export PATH=/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
 	#export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH

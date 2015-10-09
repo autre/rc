@@ -116,5 +116,5 @@
     ],
     "indent"        : 4,        // Specify indentation spacing
     "maxdepth"      : 2,        // block nesting level
-    "maxcomplexity" : 2         // cyclomatic complexity
+    "maxcomplexity" : 3         // cyclomatic complexity
 }
