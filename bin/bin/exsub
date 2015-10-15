@@ -7,12 +7,7 @@ test $# -lt 1 && {
 	exit 1
 }
 
-extract_zip_sub() {
-	test -f "$1" || {
-		echo $prog: $1 is not a file 1>&2
-		return 1
-	}
-
+extract_from_zip() {
 	old=$(pwd)
 	unz=sub.$$
 	mv "$1" /tmp
@@ -27,7 +22,27 @@ extract_zip_sub() {
 	test "$srt" && touch "$srt" && mv "$srt" "$old" && rm -fr /tmp/"$unz" && cd "$old" && return 0
 }
 
+extract_from_rar() {
+	old=$(pwd)
+	mv "$1" /tmp
+	cd /tmp
+	test -f "$1" && unrar e "$1"
+	mv *.srt "$old"
+	cd -
+}
+
 for i in "$@"
 do
-	extract_zip_sub "$i"
+	test -f "$i" || {
+		echo $prog: $i is not a file 1>&2
+		return 1
+	}
+
+	ext=$(echo $i | awk -F. '{ print $NF }')
+
+	if [ "$ext" == "zip" ] ; then
+		extract_from_zip "$i"
+	elif [ "$ext" == "rar" ] ; then
+		extract_from_rar "$i"
+	fi
 done
