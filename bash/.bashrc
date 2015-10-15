@@ -51,3 +51,5 @@ test -f ~/.dircolors && eval $(dircolors -b ~/.dircolors)
 # Autocomplete for 'g' and 'h' as well
 complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _hg h
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
