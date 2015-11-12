@@ -29,6 +29,7 @@ unset MAILCHECK
 test `uname` == Linux && {
 	export EDITOR=gvim
 	alias vi=gvim
+	rm -fr ~/Desktop ~/Downloads
 }
 
 test `uname` == Darwin && {
