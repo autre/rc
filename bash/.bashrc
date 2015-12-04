@@ -41,16 +41,9 @@ test `uname` == Darwin && {
 	alias vi='mvim -p'
 }
 
-export PATH=~/bin:$PATH:/usr/local/pgsql/bin
-
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
+
 test -f ~/.bash_aliases && . ~/.bash_aliases
-test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 test `uname` == Darwin && test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
-test -f ~/.dircolors && eval $(dircolors -b ~/.dircolors)
-
-# Autocomplete for 'g' and 'h' as well
+test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 complete -o default -o nospace -F _git g
-complete -o default -o nospace -F _hg h
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
