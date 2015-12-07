@@ -35,15 +35,15 @@ test `uname` == Linux && {
 test `uname` == Darwin && {
 	export EDITOR='mvim -p'
 	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home'
-	export TERM=xterm-256color
 	export PATH=/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
-	#export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 	alias vi='mvim -p'
+	test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
 }
 
-test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
+export PATH=$HOME/bin:$PATH
 
 test -f ~/.bash_aliases && . ~/.bash_aliases
-test `uname` == Darwin && test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 complete -o default -o nospace -F _git g
+
+test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
