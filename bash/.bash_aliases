@@ -13,7 +13,11 @@ alias df='df -h'
 alias du='du -h'
 alias cp='cp --strip-trailing-slashes'
 alias mv='mv --strip-trailing-slashes'
+alias p=less
+
+source /usr/share/bash-completion/completions/git
+complete -o default -o nospace -F _git g
+
 alias g=git
 alias gs='git status'
 alias gd='git diff'
-alias p=less
