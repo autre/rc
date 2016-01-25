@@ -69,4 +69,3 @@
 
 [diff "lisp"]
 	xfuncname="^(\\((def|test).*)$"
-

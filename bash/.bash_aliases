@@ -15,7 +15,9 @@ alias cp='cp --strip-trailing-slashes'
 alias mv='mv --strip-trailing-slashes'
 alias p=less
 
-source /usr/share/bash-completion/completions/git
+test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
+test -f /usr/share/bash-completion/completions/git && . /usr/share/bash-completion/completions/git
+test `uname` == Darwin && alias tmux="TERM=screen-256color-bce tmux"
 complete -o default -o nospace -F _git g
 
 alias g=git

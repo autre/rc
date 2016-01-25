@@ -37,13 +37,10 @@ test `uname` == Darwin && {
 	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home'
 	export PATH=/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
 	alias vi='mvim -p'
-	test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
 }
 
 export PATH=$HOME/bin:$PATH
 
 test -f ~/.bash_aliases && . ~/.bash_aliases
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
-complete -o default -o nospace -F _git g
-
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
