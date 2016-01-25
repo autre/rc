@@ -34,10 +34,10 @@ foreach {label text} { \
 	pack .$label -side top -fill x
 
 	label .$label.l -text $text -anchor w -width $WIDTH \
-							-font {tahoma 10 bold}
+							-font {tahoma 14 bold}
 	entry .$label.e -width 10 -textvariable $label -relief sunken \
 			-justify right -validate all -vcmd {ValidDouble %P} \
-			-font {tahoma 8 bold}
+			-font {tahoma 14 bold}
 
 	pack .$label.l -side left
 	pack .$label.e -side left -fill x -expand true
@@ -46,10 +46,10 @@ foreach {label text} { \
 # ποσοστό επιτυχίας & τελικό ποσό
 frame .final -borderwidth 1
 pack .final -side top -fill x
-label .final.l2 -text {Τελική Μπάνκα} -anchor w -width $WIDTH -font {tahoma 10 bold}
-label .final.r2 -text {ευρώ} -anchor w -width 4 -font {tahoma 10 bold}
+label .final.l2 -text {Τελική Μπάνκα} -anchor w -width $WIDTH -font {tahoma 16 bold}
+label .final.r2 -text {ευρώ} -anchor w -width 5 -font {tahoma 16 bold}
 entry .final.e2 -width 10 -textvariable final -relief sunken \
-				-justify right -font {tahoma 8 bold}
+				-justify right -font {tahoma 16 bold}
 pack .final.l2 -side left
 pack .final.e2 -side left -fill x -expand true
 pack .final.r2 -side left
