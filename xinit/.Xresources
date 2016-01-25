@@ -17,7 +17,7 @@ Xft.rgba: rgb
 URxvt*buffered: true
 URxvt*cursorBlink: true
 URxvt*underlineColor: yellow
-URxvt*font: xft:Inconsolata:size=14:antialias=true
+URxvt*font: xft:Inconsolata:size=16:antialias=true
 URxvt*depth: 32
 URxvt*borderless: true
 URxvt*scrollBar: false
