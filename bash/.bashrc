@@ -43,7 +43,5 @@ export PATH=$HOME/bin:$PATH
 
 test -f ~/.bash_aliases && . ~/.bash_aliases
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
-#test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
-test -n "$TMUX" && export TERM=rxvt-unicode-256color
-
+test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.current.dircolors && eval `dircolors ~/.current.dircolors`
