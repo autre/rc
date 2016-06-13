@@ -5,12 +5,11 @@ Xcursor.size: 22
 
 ! Xft settings
 Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-! Xft.hintstyle: hintslight
 Xft.autohint: false
 Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintfull
+Xft.hintstyle: hintslight
+Xft.hinting: true
+Xft.antialias: true
 Xft.rgba: rgb
 
 ! urxvt
