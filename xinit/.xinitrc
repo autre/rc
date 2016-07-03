@@ -24,7 +24,6 @@ setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
 xset -b
 numlockx on
-sh ~/.fehbg &
 dropbox &
 transmission-gtk &
 urxvt &
