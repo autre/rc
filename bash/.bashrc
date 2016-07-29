@@ -32,16 +32,16 @@ test `uname` == Linux && {
 	rm -fr ~/Desktop ~/Downloads
 }
 
-test `uname` == Darwin && {
-	export EDITOR='mvim -p'
-	export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home'
-	export PATH=/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
-	alias vi='mvim -p'
-}
-
-export PATH=$HOME/bin:$PATH
-
 test -f ~/.bash_aliases && . ~/.bash_aliases
-test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.current.dircolors && eval `dircolors ~/.current.dircolors`
+
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+test -f /usr/share/nvm/init-nvm.sh && . /usr/share/nvm/init-nvm.sh
