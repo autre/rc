@@ -14,15 +14,9 @@ alias du='du -h'
 alias cp='cp --strip-trailing-slashes'
 alias mv='mv --strip-trailing-slashes'
 alias p=less
-
-test `uname` == Darwin && {
-	test -f $(brew --prefix)/etc/bash_completion && . $(brew --prefix)/etc/bash_completion
-	alias tmux="TERM=screen-256color-bce tmux"
-}
-
-test -f /usr/share/bash-completion/completions/git && . /usr/share/bash-completion/completions/git
-complete -o default -o nospace -F _git g
-
+alias vi=gvim
 alias g=git
 alias gs='git status'
 alias gd='git diff'
+
+complete -o default -o nospace -F _git g

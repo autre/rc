@@ -24,24 +24,12 @@ shopt -s dotglob # include dotfiles in pathname expansion
 
 export PAGER=less
 export BROWSER=firefox
-unset MAILCHECK
+export EDITOR=gvim
 
-test `uname` == Linux && {
-	export EDITOR=gvim
-	alias vi=gvim
-	rm -fr ~/Desktop ~/Downloads
-}
+unset MAILCHECK
 
 test -f ~/.bash_aliases && . ~/.bash_aliases
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.current.dircolors && eval `dircolors ~/.current.dircolors`
-
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
 test -f /usr/share/nvm/init-nvm.sh && . /usr/share/nvm/init-nvm.sh
+rm -fr ~/Desktop ~/Downloads
