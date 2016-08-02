@@ -33,3 +33,5 @@ test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.current.dircolors && eval `dircolors ~/.current.dircolors`
 test -f /usr/share/nvm/init-nvm.sh && . /usr/share/nvm/init-nvm.sh
 rm -fr ~/Desktop ~/Downloads
+test -f /usr/share/bash-completion/completions/git && . /usr/share/bash-completion/completions/git
+complete -o default -o nospace -F _git g
