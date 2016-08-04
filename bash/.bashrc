@@ -25,6 +25,7 @@ shopt -s dotglob # include dotfiles in pathname expansion
 export PAGER=less
 export BROWSER=firefox
 export EDITOR=gvim
+export PATH=$HOME/bin:$PATH
 
 unset MAILCHECK
 
