@@ -29,7 +29,7 @@ export PATH=$HOME/bin:$PATH
 
 unset MAILCHECK
 
-rm -fr ~/Desktop ~/Downloads &
+rm -fr ~/Desktop ~/Downloads
 test -f ~/.bash_aliases && . ~/.bash_aliases
 test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.current.dircolors && eval `dircolors ~/.current.dircolors`
