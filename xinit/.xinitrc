@@ -18,14 +18,15 @@ fi
 export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+test -f ~/.Xresources && xrdb -merge ~/.Xresources
 setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
 xset -b
 numlockx on
-dropbox &
-transmission-gtk &
 urxvt &
 volumeicon &
+cmst &
+dropbox &
+transmission-gtk &
 exec awesome
