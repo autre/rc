@@ -39,7 +39,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
-theme.wallpaper = "/home/bill/Dropbox/Photos/Φιλοπούλου.jpeg"
+theme.wallpaper = "/home/bill/Dropbox/Photos/Κόκκινο Φούτζι.jpeg"
 theme.font = "Roboto 10"
 
 -- This is used later as the default terminal and editor to run.
