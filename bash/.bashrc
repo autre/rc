@@ -21,6 +21,7 @@ shopt -s cdspell # autocorrects cd misspellings
 shopt -s checkwinsize # update the value of LINES and COLUMNS after each command if altered
 shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob # include dotfiles in pathname expansion
+shopt -s direxpand # expand vars, avoiding backslash
 
 export PAGER=less
 export BROWSER=firefox

@@ -24,9 +24,8 @@ setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
 xset -b
 numlockx on
-urxvt &
-volumeicon &
 cmst &
-dropbox &
-transmission-gtk &
+urxvt -e tmux &
+volumeicon &
+transmission-qt &
 exec awesome
