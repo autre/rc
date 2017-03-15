@@ -1,6 +1,0 @@
-#!/bin/bash
-
-case `uname` in
-	Darwin) /usr/bin/open "$@" ;;
-	Linux) exec xdg-open "$@" & ;;
-esac
