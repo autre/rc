@@ -38,3 +38,5 @@ test -f /usr/share/nvm/init-nvm.sh && . /usr/share/nvm/init-nvm.sh
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 test -f /usr/share/bash-completion/completions/git && . /usr/share/bash-completion/completions/git
 complete -o default -o nospace -F _git g
+
+export PATH="$HOME/.yarn/bin:$PATH"
