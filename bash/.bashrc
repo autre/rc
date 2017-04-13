@@ -25,18 +25,18 @@ shopt -s direxpand # expand vars, avoiding backslash
 
 export PAGER=less
 export BROWSER=firefox
-export EDITOR=gvim
+export EDITOR=vim
 export PATH=$HOME/bin:$PATH
 
 unset MAILCHECK
 
 rm -fr ~/Desktop ~/Downloads
 test -f ~/.bash_aliases && . ~/.bash_aliases
-test -n "$TMUX" && export TERM=screen-256color # for tmux: export 256color
 test -f ~/.current.dircolors && eval `dircolors ~/.current.dircolors`
-test -f /usr/share/nvm/init-nvm.sh && . /usr/share/nvm/init-nvm.sh
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 test -f /usr/share/bash-completion/completions/git && . /usr/share/bash-completion/completions/git
 complete -o default -o nospace -F _git g
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 export PATH="$HOME/.yarn/bin:$PATH"
