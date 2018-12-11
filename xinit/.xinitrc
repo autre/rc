@@ -25,5 +25,5 @@ xsetroot -cursor_name left_ptr
 xset -b
 numlockx on
 urxvt -e tmux &
-( sleep 3; cmst & volumeicon & transmission-qt & ) &
+( sleep 3; cmst & volumeicon & ) &
 exec awesome
