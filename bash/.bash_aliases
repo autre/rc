@@ -18,5 +18,3 @@ alias vi=gvim
 alias g=git
 alias gs='git status'
 alias gd='git diff'
-
-complete -o default -o nospace -F _git g

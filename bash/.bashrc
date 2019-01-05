@@ -30,7 +30,6 @@ export PATH=$HOME/bin:$PATH
 
 unset MAILCHECK
 
-rm -fr ~/Desktop ~/Downloads
 test -f ~/.bash_aliases && . ~/.bash_aliases
 test -f ~/.current.dircolors && eval `dircolors ~/.current.dircolors`
 test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
