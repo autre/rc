@@ -24,6 +24,6 @@ setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
 xset -b
 numlockx on
-urxvt -e tmux &
+alacritty -e tmux &
 ( sleep 3; cmst & volumeicon & ) &
 exec awesome
