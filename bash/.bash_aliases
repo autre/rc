@@ -18,3 +18,4 @@ alias vi=gvim
 alias g=git
 alias gs='git status'
 alias gd='git diff'
+alias tmux='tmux -2'

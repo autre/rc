@@ -27,6 +27,7 @@ export PAGER=less
 export BROWSER=firefox
 export EDITOR=vim
 export PATH=$HOME/bin:$PATH
+export TERM=xterm-256color # for a tmux -2 session (also for screen)
 
 unset MAILCHECK
 
@@ -36,6 +37,7 @@ test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 test -f /usr/share/bash-completion/completions/git && . /usr/share/bash-completion/completions/git
 complete -o default -o nospace -F _git g
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH="$HOME/.yarn/bin:$PATH"
+export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108 --color info:108,prompt:109,spinner:108,pointer:168,marker:168'
