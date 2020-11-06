@@ -19,11 +19,13 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 
 test -f ~/.Xresources && xrdb -merge ~/.Xresources
+
 setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -option grp:caps_toggle us,el
 xsetroot -cursor_name left_ptr
 xset -b
 numlockx on
+volumeicon &
 alacritty -e tmux &
-( sleep 3; cmst & volumeicon & ) &
+
 exec awesome
