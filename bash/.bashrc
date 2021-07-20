@@ -37,7 +37,13 @@ test -f ~/.maven-completion.sh && . ~/.maven-completion.sh
 test -f /usr/share/bash-completion/completions/git && . /usr/share/bash-completion/completions/git
 complete -o default -o nospace -F _git g
 
+__git_complete g __git_main
+
 export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108 --color info:108,prompt:109,spinner:108,pointer:168,marker:168'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/vassilis/.sdkman"
+[[ -s "/home/vassilis/.sdkman/bin/sdkman-init.sh" ]] && source "/home/vassilis/.sdkman/bin/sdkman-init.sh"

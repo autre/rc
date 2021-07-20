@@ -1,5 +1,6 @@
-#
-# ~/.bash_profile
-#
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+source ~/.bashrc
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    exec startx
+fi
