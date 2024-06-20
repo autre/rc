@@ -19,3 +19,4 @@ alias g=git
 alias gs='git status'
 alias gd='git diff'
 alias tmux='tmux -2'
+alias cal='cal -m'

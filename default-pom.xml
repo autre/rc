@@ -14,14 +14,22 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>1.8</java.version>
+
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <argLine>-Duser.language=en -Duser.region=US -Duser.timezone=UTC</argLine>
+    <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
+
+    <dropwizard.version>2.0.24</dropwizard.version>
+    <junit5.version>5.7.2</junit5.version>
   </properties>
 
   <developers>
     <developer>
       <id>autre</id>
       <name>Βασίλης Αλεξάνδρου</name>
-      <email>b.alexandrou@protonmail.ch</email>
+      <email>a.vassilis@icloud.com</email>
       <timezone>+2</timezone>
     </developer>
   </developers>

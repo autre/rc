@@ -21,13 +21,14 @@ shopt -s cdspell # autocorrects cd misspellings
 shopt -s checkwinsize # update the value of LINES and COLUMNS after each command if altered
 shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob # include dotfiles in pathname expansion
-shopt -s direxpand # expand vars, avoiding backslash
+# shopt -s direxpand # expand vars, avoiding backslash
 
 export PAGER=less
 export BROWSER=firefox
 export EDITOR=vim
 export PATH=$HOME/bin:$PATH
 export TERM=xterm-256color # for a tmux -2 session (also for screen)
+export LC_TIME=el_GR.UTF-8
 
 unset MAILCHECK
 
@@ -44,6 +45,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108 --color info:108,prompt:109,spinner:108,pointer:168,marker:168'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/vassilis/.sdkman"
 [[ -s "/home/vassilis/.sdkman/bin/sdkman-init.sh" ]] && source "/home/vassilis/.sdkman/bin/sdkman-init.sh"
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
