@@ -2,6 +2,9 @@
 	name = vassilis
 	email = vassilis@pricefox.gr
 
+[column]
+	ui = auto
+
 [color]
 	diff = auto
 	status = auto
@@ -35,7 +38,6 @@
 [alias]
 	st = status
 	d = diff
-	df = diff
 	co = checkout
 	ci = commit
 	w = whatchanged
@@ -59,10 +61,14 @@
 [diff]
 	renames = copies
 	mnemonicprefix = true
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
 
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
+	sort = -committerdate
 
 [rerere]
 	enabled = true
